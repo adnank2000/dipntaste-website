@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Order | Dip N Taste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;800&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo-section">
+        <h1 class="logo-text">DIP<span>N</span>TASTE</h1>
+        <p class="tagline">Premium Sauces & Condiments</p>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="order.html" class="nav-link btn-order active">Order Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <h1>Place Your Order</h1>
+    <p>Quick & Easy Ordering via WhatsApp</p>
+  </section>
+
+  <section class="order-section">
+    <form class="order-form" id="orderForm">
+      <h2>Order Information</h2>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="oname">Full Name *</label>
+          <input type="text" id="oname" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="ophone">Phone / WhatsApp *</label>
+          <input type="tel" id="ophone" name="phone" placeholder="03XX XXXXXXX" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ocity">City *</label>
+          <input type="text" id="ocity" name="city" placeholder="Karachi" required />
+        </div>
+        <div class="form-group">
+          <label for="opayment">Payment Method</label>
+          <select id="opayment" name="payment">
+            <option>Cash on Delivery</option>
+            <option>Bank Transfer</option>
+            <option>JazzCash / Easypaisa</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="oaddress">Complete Address *</label>
+        <textarea id="oaddress" name="address" rows="2" required></textarea>
+      </div>
+
+      <h3 class="section-subtitle">Select Your Products</h3>
+      
+      <div id="orderItems">
+        <div class="order-row">
+          <select class="product-select" required>
+            <option value="">-- Choose Product --</option>
+            <option value="Tomato Ketchup">Tomato Ketchup</option>
+            <option value="Chilli Garlic Sauce">Chilli Garlic Sauce</option>
+            <option value="BBQ Sauce">BBQ Sauce</option>
+            <option value="Green Chilli Sauce">Green Chilli Sauce</option>
+            <option value="Pizza Sauce">Pizza Sauce</option>
+            <option value="Soya Sauce">Soya Sauce</option>
+            <option value="Hot & Sweet Sauce">Hot &amp; Sweet Sauce</option>
+            <option value="Top Creamy Mayo">Top Creamy Mayo</option>
+            <option value="Too Good Mayonnaise">Too Good Mayonnaise</option>
+            <option value="Original Creamy Mayo">Original Creamy Mayo</option>
+            <option value="White Vinegar">White Vinegar</option>
+          </select>
+          <select class="size-select">
+            <option>500ml</option>
+            <option>1 Liter</option>
+            <option selected>1 Gallon</option>
+            <option>1 KG</option>
+            <option>2 KG</option>
+          </select>
+          <input type="number" class="qty-input" min="1" max="999" value="1" />
+          <button type="button" class="btn-remove">×</button>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-secondary btn-add-item">+ Add Another Product</button>
+
+      <div class="form-group">
+        <label for="onotes">Special Instructions (Optional)</label>
+        <textarea id="onotes" name="notes" rows="3" placeholder="Delivery time, special requests..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-large">Send Order via WhatsApp</button>
+      <div id="orderMessage" class="form-message"></div>
+    </form>
+
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <ul id="summaryList" class="summary-list">
+        <li>No items selected</li>
+      </ul>
+      <div class="summary-info">
+        <h4>How It Works:</h4>
+        <ol>
+          <li>Fill in your details</li>
+          <li>Select your products</li>
+          <li>Click 'Send Order via WhatsApp'</li>
+          <li>Our team confirms pricing</li>
+        </ol>
+        <p class="note">💡 Prices depend on quantity and location. Bulk orders get special discounts!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>DIP N TASTE</h3>
+        <p>Premium sauces, ketchup, mayonnaise and vinegar.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📞 +92 311 1177744</p>
+        <p>📧 info@dipntaste.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Dip N Taste. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
